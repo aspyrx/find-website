@@ -10,13 +10,11 @@
     src: url('../font/elegant-lux-mager.otf');
 }
 
-@font-face {
-    font-family: 'The Medic Regular';
-    src: url('../font/the-medic-regular.ttf');
-}
-
 @font-family-sans-serif: 'Prosto Sans Bold', sans-serif;
 @font-size-base: 18px;
+@brand-primary: #F8BD15;
+@highlight-color: #F16667;
+@headings-color: #3BBEB5;
 
 html, body {
     height: 100%;
@@ -26,24 +24,22 @@ body {
     overflow-x: hidden;
 }
 
-.full-height {
-    height: 100%;
-}
-
-.center-vertical {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 #header {
-    height: 100%;
+    background-image: url('../img/header-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #header-logo {
-    height: 50vh;
+    margin: 10vh auto;
+    height: 40vh;
 }
 
 #header-logo img {
     height: 100%;
+}
+
+#header-text {
+    height: 30vh;
 }
 
