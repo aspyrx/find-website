@@ -68,6 +68,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'dist/index.xhtml': 'src/index.xhtml',
+                    'dist/preview.xhtml': 'src/preview.xhtml'
                 }
             }
         },
