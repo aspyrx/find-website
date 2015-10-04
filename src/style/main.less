@@ -251,7 +251,7 @@ body {
     margin: 0 auto 10vh;
 }
 
-.preview img, object {
+.preview img, object, svg {
     width: 100%;
     margin: 5vh 0;
 }
@@ -364,3 +364,86 @@ body {
 #retailer-experience .preview-subtitle {
     color: @brand-primary;
 }
+
+#retail-date {
+    font-family: 'Prosto Sans Bold';
+}
+
+#retail-time {
+    font-family: 'Prosto Sans Bold';
+}
+
+@keyframes retail-dot-a {
+    0% { transform: translate(2px, -180px); }
+    25% { transform: translate(-172px, -180px); }
+    50% { transform: translate(-172px, 0); }
+    75% { transform: translate(2px, 0px); }
+    100% { transform: translate(2px, -180px); }
+}
+
+@keyframes retail-dot-b {
+    0% { transform: translate(37px, -8px); }
+    30% { transform: translate(37px, -272px); }
+    50% { transform: translate(-78px, -272px); }
+    80% { transform: translate(-78px, -8px); }
+    100% { transform: translate(37px, -8px); }
+}
+
+@keyframes retail-dot-c {
+    0% { transform: translate(0, 0); }
+    30% { transform: translate(0, -264px); }
+    50% { transform: translate(120px, -264px); }
+    80% { transform: translate(120px, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes retail-dot-d {
+    0% { transform: translate(0, 146px); }
+    30% { transform: translate(0, -116px); }
+    50% { transform: translate(118px, -116px); }
+    80% { transform: translate(118px, 146px); }
+    100% { transform: translate(0, 146px); }
+}
+
+@keyframes retail-dot-e {
+    0% { transform: translate(0, -420px); }
+    25% { transform: translate(-420px, -420px); }
+    50% { transform: translate(-420px, 0); }
+    75% { transform: translate(0, 0); }
+    100% { transform: translate(0, -420px); }
+}
+
+@retail-animation-duration: 10000ms;
+
+.retail-dot-animation() {
+    .animated();
+    animation-timing-function: linear;
+    animation-duration: @retail-animation-duration;
+    animation-iteration-count: infinite;
+}
+
+#retail-dot-a {
+    .retail-dot-animation();
+    animation-name: retail-dot-a;
+}
+
+#retail-dot-b {
+    .retail-dot-animation();
+    animation-name: retail-dot-b;
+}
+
+#retail-dot-c {
+    .retail-dot-animation();
+    animation-name: retail-dot-c;
+}
+
+#retail-dot-d {
+    .retail-dot-animation();
+    animation-name: retail-dot-d;
+}
+
+#retail-dot-e {
+    .retail-dot-animation();
+    animation-name: retail-dot-e;
+}
+

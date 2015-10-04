@@ -54,7 +54,7 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    'dist/script/script.js': ['src/script/script.js']
+                    'dist/script/script-preview.js': ['src/script/script-preview.js']
                 }
             }
         },
