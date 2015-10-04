@@ -30,6 +30,10 @@ body {
     font-family: 'Prosto Sans Bold';
 }
 
+.highlight {
+    color: @highlight-color;
+}
+
 .animated() {
     animation-fill-mode: both;
 }
@@ -157,14 +161,8 @@ body {
     margin-top: 0;
     color: @brand-primary;
     font-family: 'Prosto Sans Bold';
-    font-size: 30px;
-    @media (min-width: @screen-sm-min) {
-        font-size: 60px;
-    }
+    font-size: 9vw;
     @media (min-width: @screen-md-min) {
-        font-size: 80px;
-    }
-    @media (min-width: @screen-lg-min) {
         font-size: 100px;
     }
 }
@@ -173,3 +171,20 @@ body {
     margin: 20vh 0;
 }
 
+#livetracking {
+    color: @gray;
+    font-family: 'Prosto Sans Bold';
+}
+
+#livetracking h1 {
+    color: @gray;
+    font-size: 9vw;
+    @media (min-width: @screen-md-min) {
+        font-size: 100px;
+    }
+}
+
+#livetracking object {
+    height: 50vh;
+    max-width: 100%;
+}

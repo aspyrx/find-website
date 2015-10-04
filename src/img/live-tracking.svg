@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="../style/style.css" ?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 500 400" height="400" width="500" version="1.1" y="0px" x="0px" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><style type="text/css">
+	.st0{fill:#F8BD15;}
+	.st1{fill:#F16667;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:&apos;ProstoSans-Bold&apos;;}
+	.st4{font-size:17.4187px;}
+	.st5{opacity:0.46;fill:#FFFFFF;}
+</style><g fill="#f8bd15"><rect class="st0" height="145.9" width="49" y="36.65" x="166.7"/><rect class="st0" height="145.9" width="49" y="214.85" x="166.7"/><rect class="st0" height="145.9" width="49" y="214.85" x="241.5"/><rect class="st0" height="145.9" width="49" y="36.65" x="241.5"/><rect class="st0" height="145.9" width="49" y="36.65" x="320.2"/><rect class="st0" height="145.9" width="49" y="214.85" x="320.2"/><rect class="st0" height="145.9" width="49" y="36.65" x="402.3"/><rect class="st0" height="145.9" width="49" y="214.85" x="402.3"/><rect class="st0" height="87.6" width="87.6" y="38.15" x="48.7"/><rect class="st0" height="85.6" width="85.6" y="159.45" x="48.7"/><rect class="st0" height="85.6" width="85.6" y="277.75" x="48.7"/></g><g id="tracking-dot" transform="translate(0 -53.45)"><circle d="m 397.99999,331.20001 a 12.7,12.7 0 0 1 -12.7,12.7 12.7,12.7 0 0 1 -12.7,-12.7 12.7,12.7 0 0 1 12.7,-12.7 12.7,12.7 0 0 1 12.7,12.7 z" class="st1" cy="331.2" cx="385.3" r="12.7" fill="#f16667"/><text id="tracking-exclamation" font-size="17.419px" class="st2 st3 st4" y="336.83661" x="381.80859" font-family="ProstoSans-Bold" fill="#ffffff">!</text>
+</g><rect opacity="0.46" class="st5" height="11.9" width="11.9" y="271.55" x="410.4" fill="#fff"/><rect opacity="0.46" class="st5" height="11.6" width="11.6" y="92.55" x="173.8" fill="#fff"/></svg>
