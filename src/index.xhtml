@@ -42,22 +42,22 @@
 </div>
 <div id="personalized" class="preview container-fluid">
     <div class="row">
-        <div class="text-right col-xs-12">
-            <h1>FOR SHOPPERS AND RETAILERS ALIKE.</h1>
+        <div class="col-xs-12">
+            <h1 class="preview-title">FOR SHOPPERS AND RETAILERS ALIKE.</h1>
         </div>
     </div>
     <div class="container">
-       <div class="row">
-            <div class="col-md-4">
+       <div class="flex row">
+            <div class="flex-center-vertical text-center col-md-4">
+                <img src="img/preview-finding-eggs.png" />
+            </div>
+            <div class="flex-center-vertical text-center col-md-4">
+                <img src="img/preview-retail.png" />
+            </div>
+            <div class="flex-center-vertical col-md-offset-1 col-md-3">
                 <p><span class="brand">FIND</span> gives you suggestions including recipes, discounts, and related items based on your current and previous shopping lists.</p>
                 <p>Retailers can take advantage of <span class="brand">FIND</span>'s analytics data on customer circulation thanks to our precise geolocation technology.</p>
                 <p><a class="btn btn-lg btn-primary" href="/preview.xhtml" target="_blank">SEE MORE</a></p>
-            </div>
-            <div class="text-center col-md-4">
-                <img src="img/mockup-finding-eggs.png" />
-            </div>
-            <div class="text-center col-md-4">
-                <img src="img/mockup-finding-eggs.png" />
             </div>
         </div>
     </div>
@@ -70,9 +70,10 @@
     </div>
     <div class="flex row">
         <div class="flex-center-vertical col-md-6">
-            <p>Based on your location, <span class="brand">FIND</span> provides you information about <span class="highlight">discounts and nearby recommended items</span> on the go.</p>
+            <p>Using <span class="highlight">Bluetooth Low Energy</span> and <span class="highlight">iBeacon technology</span>, <span class="brand">FIND</span> determines your position inside any equipped retail store.</p>
+            <p><span class="brand">FIND</span> helps you keep track of your shopping trip by locating all the items on your grocery list and providing you information about <span class="highlight">discounts</span> and <span class="highlight">nearby recommended items</span> on the go.</p>
         </div>
-        <div class="text-center col-md-6">
+        <div class="flex-center-vertical text-center col-md-6">
             <object type="image/svg+xml" data="img/live-tracking.svg" />
         </div>
     </div>
@@ -88,5 +89,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="/script/script.js"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-68425090-1', 'auto');
+ga('send', 'pageview');
+</script>
 </body>
 </html>

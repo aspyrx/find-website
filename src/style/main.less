@@ -43,10 +43,32 @@ body {
 
 .highlight {
     color: @highlight-color;
+    font-weight: bold;
 }
 
 .animated() {
     animation-fill-mode: both;
+}
+
+@keyframes slideY {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-66px); }
+}
+
+@keyframes slideX {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-30px); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes dotTranslate {
+    0% { transform: translate(30px, 64px); }
+    50% { transform: translate(30px, 0); }
+    100% { transform: none; }
 }
 
 @keyframes fadeInSlideDown {
@@ -59,12 +81,32 @@ body {
     100% { opacity: 1; transform: none; }
 }
 
-.fadeInSlideDown() {
-    animation-name: fadeInSlideDown;
+@header-logo-animation-duration: 2500ms;
+
+#header-logo-dot {
+    .animated();
+    animation-name: dotTranslate;
+    animation-duration: @header-logo-animation-duration;
 }
 
-.fadeInSlideUp() {
-    animation-name: fadeInSlideUp;
+#header-logo-vertical-trace {
+    .animated();
+    animation-name: slideY;
+    animation-duration: @header-logo-animation-duration / 2;
+}
+
+#header-logo-horizontal-trace {
+    .animated();
+    animation-name: slideX;
+    animation-delay: @header-logo-animation-duration / 2;
+    animation-duration: @header-logo-animation-duration / 2;
+}
+
+#header-logo-leaves {
+    .animated();
+    animation-name: fadeIn;
+    animation-delay: @header-logo-animation-duration + 200ms;
+    animation-duration: 500ms;
 }
 
 #header {
@@ -78,8 +120,8 @@ body {
     height: 40vh;
 
     .animated();
-    .fadeInSlideDown();
-    animation-duration: 1250ms;
+    animation-name: fadeInSlideDown;
+    animation-duration: @header-logo-animation-duration / 2;
 }
 
 #header-logo object {
@@ -104,8 +146,8 @@ body {
     }
 
     .animated();
-    .fadeInSlideUp();
-    animation-delay: 2700ms;
+    animation-name: fadeInSlideUp;
+    animation-delay: @header-logo-animation-duration + 200ms;
     animation-duration: 750ms;
 }
 
@@ -201,21 +243,8 @@ body {
     margin-bottom: 10vh;
 }
 
-.preview {
-    background-color: @headings-color;
-    color: white;
-}
-
-.preview h1 {
-    color: @brand-primary;
-    font-family: 'Prosto Sans Bold';
-    font-size: 50px;
-    margin-top: 10vh;
-    margin-right: 10vh;
-}
-
 .preview p {
-    margin: 10vh 0;
+    margin: 2vh 0;
 }
 
 .preview .container {
@@ -224,16 +253,36 @@ body {
 
 .preview img {
     width: 100%;
+    margin: 5vh 0;
 }
 
-.preview .btn {
+.preview-title {
+    font-family: 'Prosto Sans Bold';
+    font-size: 50px;
+    @media (min-width: @screen-md-min) {
+        margin: 10vh 10vh 0;
+    }
+}
+
+.preview-subtitle {
+    font-family: 'Prosto Sans Bold';
+    font-size: 30px;
+    margin: 10vh 0;
+}
+
+#personalized .btn {
     font-family: @headings-font-family;
     padding: 2*@padding-large-vertical 2*@padding-large-horizontal;
+    margin-top: 3vh;
 }
 
-#livetracking {
-    color: @gray;
-    font-family: 'Prosto Sans Bold';
+#personalized {
+    background-color: @headings-color;
+    color: white;
+}
+
+#personalized .preview-title {
+    color: @brand-primary;
 }
 
 #livetracking h1 {
@@ -290,3 +339,15 @@ body {
     animation-duration: @tracking-animation-duration;
 }
 
+#shopper-experience {
+    background-color: @brand-primary;
+    color: white;
+}
+
+#shopper-experience .preview-title {
+    color: @highlight-color;
+}
+
+#shopper-experience .preview-subtitle {
+    color: @highlight-color;
+}
