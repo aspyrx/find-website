@@ -11,7 +11,7 @@
 }
 
 @font-family-sans-serif: 'Elegant Lux Mager', sans-serif;
-@font-size-base: 24px;
+@font-size-base: 18px;
 @brand-primary: #F8BD15;
 @highlight-color: #F16667;
 @headings-font-family: 'Prosto Sans Bold', sans-serif;
@@ -26,7 +26,9 @@ body {
 }
 
 .flex {
-    display: flex;
+    @media (min-width: @screen-md-min) {
+        display: flex;
+    }
 }
 
 .flex-center-vertical {
@@ -36,7 +38,7 @@ body {
 
 .brand {
     color: @brand-primary;
-    font-family: 'Prosto Sans Bold';
+    font-family: @headings-font-family;
 }
 
 .highlight {
@@ -148,6 +150,7 @@ body {
 
 #header-logo object {
     height: 100%;
+    max-width: 100%;
 }
 
 #header-text {
@@ -178,10 +181,12 @@ body {
 
 #features img {
     height: 20vh;
+    max-width: 100%;
 }
 
 #features object {
     height: 20vh;
+    max-width: 100%;
 }
 
 @keyframes icon-list-pencil {
@@ -276,6 +281,8 @@ body {
     color: @brand-primary;
     font-family: 'Prosto Sans Bold';
     font-size: 50px;
+    margin-top: 10vh;
+    margin-right: 10vh;
 }
 
 #personalized p {
@@ -283,7 +290,17 @@ body {
 }
 
 #personalized .container {
-    margin: 5vh auto;
+    margin: 0 auto 10vh;
+}
+
+#personalized img {
+    height: 100%;
+    max-width: 100%;
+}
+
+#personalized .btn {
+    font-family: @headings-font-family;
+    padding: 2*@padding-large-vertical 2*@padding-large-horizontal;
 }
 
 #livetracking {
@@ -293,10 +310,7 @@ body {
 
 #livetracking h1 {
     color: @gray;
-    font-size: 9vw;
-    @media (min-width: @screen-md-min) {
-        font-size: 100px;
-    }
+    font-size: 50px;
 }
 
 #livetracking object {
@@ -347,3 +361,4 @@ body {
     animation-iteration-count: infinite;
     animation-duration: @tracking-animation-duration;
 }
+
