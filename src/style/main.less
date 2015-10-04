@@ -49,22 +49,6 @@ body {
     animation-fill-mode: both;
 }
 
-@keyframes slideY {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-25%); }
-}
-
-@keyframes slideX {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-12.5%); }
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-
 @keyframes fadeInSlideDown {
     0% { opacity: 0; transform: translateY(-10%); }
     100% { opacity: 1; transform: none; }
@@ -75,62 +59,12 @@ body {
     100% { opacity: 1; transform: none; }
 }
 
-@keyframes dotTranslate {
-    0% { transform: translate(11.5%, 25%); }
-    50% { transform: translate(11.5%, 0); }
-    100% { transform: none; }
-}
-
-@header-logo-animation-duration: 2500ms;
-
-.slideY() {
-    animation-name: slideY;
-}
-
-.slideX() {
-    animation-name: slideX;
-}
-
-.fadeIn() {
-    animation-name: fadeIn;
-}
-
 .fadeInSlideDown() {
     animation-name: fadeInSlideDown;
 }
 
 .fadeInSlideUp() {
     animation-name: fadeInSlideUp;
-}
-
-.dotTranslate() {
-    animation-name: dotTranslate;
-}
-
-#header-logo-dot {
-    .animated();
-    .dotTranslate();
-    animation-duration: @header-logo-animation-duration;
-}
-
-#header-logo-vertical-trace {
-    .animated();
-    .slideY();
-    animation-duration: @header-logo-animation-duration / 2;
-}
-
-#header-logo-horizontal-trace {
-    .animated();
-    .slideX();
-    animation-delay: @header-logo-animation-duration / 2;
-    animation-duration: @header-logo-animation-duration / 2;
-}
-
-#header-logo-leaves {
-    .animated();
-    .fadeIn();
-    animation-delay: @header-logo-animation-duration + 200ms;
-    animation-duration: 500ms;
 }
 
 #header {
@@ -145,7 +79,7 @@ body {
 
     .animated();
     .fadeInSlideDown();
-    animation-duration: @header-logo-animation-duration / 2;
+    animation-duration: 1250ms;
 }
 
 #header-logo object {
@@ -171,17 +105,12 @@ body {
 
     .animated();
     .fadeInSlideUp();
-    animation-delay: @header-logo-animation-duration + 200ms;
+    animation-delay: 2700ms;
     animation-duration: 750ms;
 }
 
 #features, #features h3 {
     color: @highlight-color;
-}
-
-#features img {
-    height: 20vh;
-    max-width: 100%;
 }
 
 #features object {
@@ -294,8 +223,7 @@ body {
 }
 
 .preview img {
-    height: 100%;
-    max-width: 100%;
+    width: 100%;
 }
 
 .preview .btn {
