@@ -70,6 +70,20 @@ module.exports = function(grunt) {
                     'dist/index.xhtml': 'src/index.xhtml',
                 }
             }
+        },
+
+        postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('autoprefixer')({
+                        browsers: ['last 2 versions']
+                    })
+                ]
+            },
+            dist: {
+                src: 'src/style/*.css'
+            }
         }
     });
 
@@ -80,6 +94,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'less:dist', 'cssmin:dist', 'uglify:dist', 'htmlmin:dist'])
+    grunt.loadNpmTasks('grunt-postcss');
+    grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'less:dist', 'postcss:dist', 'cssmin:dist', 'uglify:dist', 'htmlmin:dist'])
     grunt.registerTask('default', ['watch']);
 };
