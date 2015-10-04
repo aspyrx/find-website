@@ -186,13 +186,80 @@ body {
 
 @keyframes icon-list-pencil {
     0% { transform: none; }
-    50% { transform: rotate(2deg); }
+    50% { transform: rotate(1deg); }
     100% { transform: none; }
 }
 
 #icon-list-pencil {
+    .animated();
     animation-duration: 500ms;
     animation-name: icon-list-pencil;
+    animation-iteration-count: infinite;
+}
+
+@keyframes icon-follow-a {
+    0% { opacity: 0.5; }
+    10% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+@keyframes icon-follow-b {
+    0% { opacity: 0.5; }
+    25% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+@keyframes icon-follow-c {
+    0% { opacity: 0.5; }
+    40% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+@keyframes icon-follow-d {
+    0% { opacity: 0.5; }
+    55% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.icon-follow-pulse() {
+    .animated();
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+#icon-follow-a {
+    .icon-follow-pulse();
+    animation-name: icon-follow-a;
+}
+
+#icon-follow-b {
+    .icon-follow-pulse();
+    animation-name: icon-follow-b;
+}
+
+#icon-follow-c {
+    .icon-follow-pulse();
+    animation-name: icon-follow-c;
+}
+
+#icon-follow-d {
+    .icon-follow-pulse();
+    animation-name: icon-follow-d;
+}
+
+@keyframes icon-save-coin {
+    0% { opacity: 0; transform: none; }
+    20% { opacity: 1; transform: none; }
+    100% { opacity: 1; transform: translateY(25px); }
+}
+
+#icon-save-coin {
+    animation-name: icon-save-coin;
+    animation-duration: 2000ms;
     animation-iteration-count: infinite;
 }
 
