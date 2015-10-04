@@ -25,6 +25,15 @@ body {
     overflow-x: hidden;
 }
 
+.flex {
+    display: flex;
+}
+
+.flex-center-vertical {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .brand {
     color: @brand-primary;
     font-family: 'Prosto Sans Bold';
@@ -53,6 +62,17 @@ body {
     100% { opacity: 1; }
 }
 
+
+@keyframes fadeInSlideDown {
+    0% { opacity: 0; transform: translateY(-10%); }
+    100% { opacity: 1; transform: none; }
+}
+
+@keyframes fadeInSlideUp {
+    0% { opacity: 0; transform: translateY(10%); }
+    100% { opacity: 1; transform: none; }
+}
+
 @keyframes dotTranslate {
     0% { transform: translate(11.5%, 25%); }
     50% { transform: translate(11.5%, 0); }
@@ -71,6 +91,14 @@ body {
 
 .fadeIn() {
     animation-name: fadeIn;
+}
+
+.fadeInSlideDown() {
+    animation-name: fadeInSlideDown;
+}
+
+.fadeInSlideUp() {
+    animation-name: fadeInSlideUp;
 }
 
 .dotTranslate() {
@@ -99,7 +127,7 @@ body {
 #header-logo-leaves {
     .animated();
     .fadeIn();
-    animation-delay: @header-logo-animation-duration;
+    animation-delay: @header-logo-animation-duration + 200ms;
     animation-duration: 500ms;
 }
 
@@ -112,6 +140,10 @@ body {
 #header-logo {
     margin: 10vh auto;
     height: 40vh;
+
+    .animated();
+    .fadeInSlideDown();
+    animation-duration: @header-logo-animation-duration / 2;
 }
 
 #header-logo object {
@@ -135,9 +167,9 @@ body {
     }
 
     .animated();
-    .fadeIn();
-    animation-delay: @header-logo-animation-duration + 500ms;
-    animation-duration: 500ms;
+    .fadeInSlideUp();
+    animation-delay: @header-logo-animation-duration + 200ms;
+    animation-duration: 750ms;
 }
 
 #features, #features h3 {
@@ -146,6 +178,22 @@ body {
 
 #features img {
     height: 20vh;
+}
+
+#features object {
+    height: 20vh;
+}
+
+@keyframes icon-list-pencil {
+    0% { transform: none; }
+    50% { transform: rotate(2deg); }
+    100% { transform: none; }
+}
+
+#icon-list-pencil {
+    animation-duration: 500ms;
+    animation-name: icon-list-pencil;
+    animation-iteration-count: infinite;
 }
 
 #features p {
@@ -158,17 +206,17 @@ body {
 }
 
 #personalized h1 {
-    margin-top: 0;
     color: @brand-primary;
     font-family: 'Prosto Sans Bold';
-    font-size: 9vw;
-    @media (min-width: @screen-md-min) {
-        font-size: 100px;
-    }
+    font-size: 50px;
 }
 
 #personalized p {
-    margin: 20vh 0;
+    margin: 10vh 0;
+}
+
+#personalized .container {
+    margin: 5vh auto;
 }
 
 #livetracking {
@@ -187,4 +235,48 @@ body {
 #livetracking object {
     height: 50vh;
     max-width: 100%;
+}
+
+@keyframes tracking-animation {
+    0% { transform: translate(0, -53.45px); }
+    5% { transform: translate(0, -132px); }
+    15% { transform: translate(-234px, -132px); }
+    20% { transform: translate(-234px, -234px); }
+    35% { transform: translate(-234px, -234px); }
+    40% { transform: translate(-234px, -310px); }
+    50% { transform: translate(-80px, -310px); }
+    70% { transform: translate(-80px, 46px); }
+    80% { transform: translate(0, 46px); }
+    85% { transform: translate(0, -53.45px); }
+    100% { transform: translate(0, -53.45px); }
+}
+
+@keyframes tracking-exclamation-animation {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    23.75% { opacity: 1; }
+    27.5% { opacity: 0; }
+    31.25% { opacity: 1; }
+    35% { opacity: 0; }
+    85% { opacity: 0; }
+    88.75% { opacity: 1; }
+    92.5% { opacity: 0; }
+    96.25% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@tracking-animation-duration: 20s;
+
+#tracking-dot {
+    .animated();
+    animation-name: tracking-animation;
+    animation-iteration-count: infinite;
+    animation-duration: @tracking-animation-duration;
+}
+
+#tracking-exclamation {
+    .animated();
+    animation-name: tracking-exclamation-animation;
+    animation-iteration-count: infinite;
+    animation-duration: @tracking-animation-duration;
 }
